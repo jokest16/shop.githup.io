@@ -1,0 +1,205 @@
+@import "bourbon"
+@import "var.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/font-awesome/css/font-awesome"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+.sort
+	margin: 40px 0 10px 0
+	&-row
+		padding: 15px 0px
+
+		background-color: #fff
+		border: 1px solid #eeeeee
+		&-category
+			list-style: none
+			margin-top: .5%
+			&-item
+				float: left
+				display: inline-block
+				text-transform: uppercase
+				padding: 0 15px 0 9px
+				background: url(../img/sort/delimiter.png) no-repeat right center
+				transition: all .5s ease
+				&:last-child
+					background: none
+				&:hover
+					transform: scale(1.1)
+		&-select
+			&-list
+			&-item
+				margin: -.5% 30px 0 0
+				float: right
+				span
+					display: inline-block
+					margin-right: 10px
+				.list
+					margin-right: 100px
+				.first
+					display: inline-block
+					background: url(../img/sort/squares.png) no-repeat
+					width: 28px
+					margin-right: 5px
+				.second
+					display: inline-block
+					background: url(../img/sort/sort-red.png) no-repeat
+					width: 28px
+.shop
+	margin-top: 40px
+	&-product
+		max-width: 830px
+		border: 2px solid red
+		float: left
+		display: flex
+		flex-flow: row wrap
+		position: relative
+		.sale
+			position: absolute
+			top: 20px
+			left: 20px
+			padding: 15px 10px
+			font-weight: bolder
+			color: #fff
+			opacity: .99
+			&::before
+				content: ''
+				position: absolute
+				top: 0px
+				left: 0
+				z-index: -1
+				display: block
+				background: $redBorder
+				width: 50px
+				height: 50px
+				border-radius: 50px
+				opacity: .8
+		&-item
+			width: 265px
+			margin-right: 10px
+			margin-bottom: 15px
+			position: relative
+			transition: all .5s ease
+			&:hover
+				transform: scale(1.1)
+				z-index: 999
+			img
+				width: 100%
+			&-description
+				background-color: #fff
+				padding: 20px 15px
+				box-shadow: 0px 8px 15px -6px rgba(0,0,0,0.75)
+				border-radius: 0 0 10px 10px
+				h4
+					.artist
+						font-style: italic
+						font-weight: normal
+				.price
+					&-item
+						font-weight: bold
+					.add-button
+						background: $buttonColor
+						display: inline-block
+						color: #fff
+						padding: 5px 10px
+						border-radius: 10px
+						float: right
+	&-side
+		border: 2px solid red
+		max-width: 300px
+		padding: 10px
+		float: right
+		.side-content
+			h3
+				padding: 0px 5px
+				margin: 0
+				font-size: em(20px)
+				text-transform: uppercase
+				font-family: 'OswaldRegular', sans-serif
+			.toggle-item
+				margin-top: 10px
+				padding: 10px
+				border-top: 1px dotted
+				position: relative
+				.minus
+					position: absolute
+					top: -3px
+					left: 0
+					height: 5px
+					width: 45px
+					background-color: $redBorder
+					cursor: pointer
+					animation-duration: 1s
+					.pluse
+						content: ''
+						position: absolute
+						top: 0px
+						left: 0
+						height: 5px
+						width: 45px
+						background-color: $redBorder
+						cursor: pointer
+						transform: rotate(90deg)
+						opacity: 0
+						animation-duration: 1s
+				.prise
+					margin-top: 10px
+					padding: 10px 15px
+					.button
+						background-color: $buttonColor
+						display: inline-block
+						padding: 10px 20px
+						color: #fff
+						text-transform: uppercase
+						margin-left: 20px
+						transition: all .5s ease
+						&:hover
+							transform: scale(1.1)
+					input
+						width: 100%
+						margin-bottom: 20px
+	@keyframes move
+		from
+			transform: rotate(0deg) scale(1)
+		to
+			transform: rotate(90deg) scale(.7)
+			left: -10px
+	@keyframes move-back
+		from
+			transform: rotate(90deg) scale(.7)
+		to
+			transform: rotate(0deg) scale(1)
+	@keyframes opac
+		from
+			opacity: 0
+		to
+			opacity: 1
+	@keyframes opac-back
+		from
+			opacity: 1
+		to
+			opacity: 0
+//ALWAYS END
+@import "media"

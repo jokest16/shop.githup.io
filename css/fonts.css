@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "ArmataRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ArmataRegular/ArmataRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ArmataRegular/ArmataRegular.woff") format("woff"), url("../fonts/ArmataRegular/ArmataRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OswaldRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/OswaldRegular/OswaldRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OswaldRegular/OswaldRegular.woff") format("woff"), url("../fonts/OswaldRegular/OswaldRegular.ttf") format("truetype"); }
