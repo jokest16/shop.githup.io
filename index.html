@@ -114,17 +114,18 @@
             <div class="shop-product-item-description">
             <h4>Aqualang<span class="artist"> by Artist</span></h4>
             <div class="rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star red-star" aria-hidden="true"></i>
+              <i class="fa fa-star red-star" aria-hidden="true"></i>
+              <i class="fa fa-star red-star" aria-hidden="true"></i>
+              <i class="fa fa-star red-star" aria-hidden="true"></i>
               <i class="fa fa-star" aria-hidden="true"></i>
             </div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </p>
             <div class="price">
-              <span class="price-item text-through">$17.99</span>
+              <span class="price-item">$17.99</span>
+              <span class="price-item-new">8.99</span>
               <a href="#" class="add-button">Add to cart</a>
             </div>
           </div>
@@ -134,10 +135,10 @@
           <div class="shop-product-item-description">
           <h4>Aqualang<span class="artist"> by Artist</span></h4>
           <div class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
           </div>
           <p>
@@ -154,10 +155,10 @@
           <div class="shop-product-item-description">
           <h4>Aqualang<span class="artist"> by Artist</span></h4>
           <div class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
           </div>
           <p>
@@ -175,17 +176,18 @@
           <div class="shop-product-item-description">
           <h4>Aqualang<span class="artist"> by Artist</span></h4>
           <div class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
           <div class="price">
-            <span class="price-item">$17.99</span>
+            <span class="price-item text-through">$17.99</span>
+            <span class="price-item-new">8.99</span>
             <a href="#" class="add-button">Add to cart</a>
           </div>
           </div>
@@ -195,10 +197,10 @@
           <div class="shop-product-item-description">
           <h4>Aqualang<span class="artist"> by Artist</span></h4>
           <div class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
           </div>
           <p>
@@ -215,10 +217,10 @@
           <div class="shop-product-item-description">
           <h4>Aqualang<span class="artist"> by Artist</span></h4>
           <div class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
+            <i class="fa fa-star red-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
           </div>
           <p>
@@ -231,18 +233,102 @@
           </div>
         </div>
         </div>
-        <aside class="shop-side">
+        <aside class="shop-side"><!-- item с ползунком -->
           <div class="side-content">
-            <h3>Price filter</h3>
+            <h3>Prise filter</h3>
             <div class="toggle-item">
+              <input type="checkbox" name="name" value="" id="toggle-sub1">
+              <label for="toggle-sub1">
               <div class="minus">
                 <div class="pluse"></div>
               </div>
-              <div class="prise">
-                <input type="range" name="name" value="">
-                <span>Price: $0 - $999</span>
-                <a href="#" class="button">Filter</a>
+              <div class="toggle-item-zone">
+                <div class="prise">
+                  <input type="range" name="name" value="">
+                  <span>Price: $0 - $999</span>
+                  <a href="#" class="button">Filter</a>
+                </div>
               </div>
+              </label>
+            </div>
+          </div>
+          <div class="side-content"><!-- item  с лучшеми товарами -->
+            <h3>Best seller</h3>
+            <div class="toggle-item">
+              <input type="checkbox" name="name" value="" id="toggle-sub2">
+              <label for="toggle-sub2">
+              <div class="minus">
+                <div class="pluse"></div>
+              </div>
+              <div class="toggle-item-zone">
+                <div class="best">
+                  <img src="img/shop/small-item1.jpg" alt="" />
+                  <div class="best-dicription">
+                    <h4>Awaken the Hero</h4>
+                    <p>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i><br>
+                    <a href="#" class="comments">12 COMMENTS</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="best-s">
+                  <img src="img/shop/small-item2.jpg" alt="" />
+                  <div class="best-dicription">
+                    <h4>Awaken the Hero</h4>
+                    <p>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star red-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i><br>
+                    <a href="#" class="comments">12 COMMENTS</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </label>
+            </div>
+          </div>
+          <div class="side-content"><!-- item с категориями -->
+            <h3>Our categories</h3>
+            <div class="toggle-item">
+              <input type="checkbox" name="name" value="" id="toggle-sub3">
+              <label for="toggle-sub3">
+              <div class="minus">
+                <div class="pluse"></div>
+              </div>
+              <div class="toggle-item-zone">
+                <ul class="category">
+                  <li class="category-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Rock &amp; Roll <span class="count">(5)</span></a></li>
+                  <li class="category-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Hardcore &amp; Metal <span class="count">(3)</span></a></li>
+                  <li class="category-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Dance &amp; Pop <span class="count">(8)</span></a></li>
+                  <li class="category-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Classical Music <span class="count">(12)</span></a></li>
+                  <li class="category-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Jazz <span class="count">(7)</span></a></li>
+                  <li class="category-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Country <span class="count">(15)</span></a></li>
+                </ul>
+              </div>
+              </label>
+            </div>
+          </div>
+          <div class="side-content"><!-- поиск -->
+            <h3>Search our albums</h3>
+            <div class="toggle-item">
+              <input type="checkbox" name="name" value="" id="toggle-sub4">
+              <label for="toggle-sub4">
+              <div class="minus">
+                <div class="pluse"></div>
+              </div>
+              <div class="toggle-item-zone">
+                <div class="search">
+                  <input type="text" name="name" value="Search...">
+                  <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              </label>
             </div>
           </div>
         </aside>

@@ -1,18 +1,13 @@
 $(function(){
-  var count = 0;
-  $('.minus').on('click',function() {
+  var count = 0, minus = $('.minus');
+  minus.on('click',function() {
     count++
     if(count % 2 === 0){
-      $('.minus').css('animation-name','move-back');
-      $('.minus').css('transform','rotate(0deg) scale(1)');
-      $('.pluse').css('animation-name','opac-back');
-      $('.pluse').css('opacity','0');
+      $(this).css('animation-name','move-back').css('transform','rotate(0deg) scale(1)');
+      $(this).find('.pluse').css('animation-name','opac-back').css('opacity','0');
     }else{
-      $('.minus').css('animation-name','move');
-      $('.minus').css('transform','rotate(-90deg) scale(.7)');
-      $('.minus').css('left','-10px');
-      $('.pluse').css('animation-name','opac');
-      $('.pluse').css('opacity','1');
+      $(this).css('animation-name','move').css('transform','rotate(-90deg) scale(.7)');// первый поворот класса плюс
+      $(this).find('.pluse').css('animation-name','opac').css('opacity','1');// появление класса плюс
     }
   });
 });

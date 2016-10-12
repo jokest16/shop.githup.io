@@ -27,11 +27,12 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
+.red-star
+	color: $redBorder
 .sort
 	margin: 40px 0 10px 0
 	&-row
 		padding: 15px 0px
-
 		background-color: #fff
 		border: 1px solid #eeeeee
 		&-category
@@ -71,7 +72,6 @@ body textarea:required:valid
 	margin-top: 40px
 	&-product
 		max-width: 830px
-		border: 2px solid red
 		float: left
 		display: flex
 		flex-flow: row wrap
@@ -84,6 +84,7 @@ body textarea:required:valid
 			font-weight: bolder
 			color: #fff
 			opacity: .99
+			z-index: 2
 			&::before
 				content: ''
 				position: absolute
@@ -107,18 +108,31 @@ body textarea:required:valid
 				z-index: 999
 			img
 				width: 100%
+				z-index: 2
+				position: relative
 			&-description
 				background-color: #fff
-				padding: 20px 15px
+				padding: 15px 10px
 				box-shadow: 0px 8px 15px -6px rgba(0,0,0,0.75)
 				border-radius: 0 0 10px 10px
+				position: relative
+				top: -10px
 				h4
+					margin: 5px 0
 					.artist
 						font-style: italic
 						font-weight: normal
+				p
+					margin: 5px 0
 				.price
 					&-item
 						font-weight: bold
+						&-new
+							background: $redBorder
+							color: #fff
+							font-weight: bolder
+							padding: 1px
+							margin-left: 5px
 					.add-button
 						background: $buttonColor
 						display: inline-block
@@ -127,13 +141,13 @@ body textarea:required:valid
 						border-radius: 10px
 						float: right
 	&-side
-		border: 2px solid red
 		max-width: 300px
-		padding: 10px
+		min-width: 200px
+		margin-left: 10px
 		float: right
 		.side-content
 			h3
-				padding: 0px 5px
+				padding: 10px 5px 0 5px
 				margin: 0
 				font-size: em(20px)
 				text-transform: uppercase
@@ -143,10 +157,28 @@ body textarea:required:valid
 				padding: 10px
 				border-top: 1px dotted
 				position: relative
+				&-zone
+					height: 0
+					opacity: 0
+					transition: all .5s ease
+				input[type="checkbox"]
+					display: none
+				input[id="toggle-sub1"]:checked ~label>.toggle-item-zone
+					height: 70px
+					opacity: 1
+				input[id="toggle-sub2"]:checked ~label>.toggle-item-zone
+					height: 190px
+					opacity: 1
+				input[id="toggle-sub3"]:checked ~label>.toggle-item-zone
+					height: 180px
+					opacity: 1
+				input[id="toggle-sub4"]:checked ~label>.toggle-item-zone
+					height: 170px
+					opacity: 1
 				.minus
 					position: absolute
 					top: -3px
-					left: 0
+					left: -10px
 					height: 5px
 					width: 45px
 					background-color: $redBorder
@@ -170,22 +202,76 @@ body textarea:required:valid
 					.button
 						background-color: $buttonColor
 						display: inline-block
-						padding: 10px 20px
+						padding: 5px 15px
 						color: #fff
 						text-transform: uppercase
-						margin-left: 20px
+						margin-left: 25px
 						transition: all .5s ease
 						&:hover
 							transform: scale(1.1)
 					input
 						width: 100%
-						margin-bottom: 20px
+						margin-bottom: 10px
+				.best
+					margin: 10px 0
+					display: inline-block
+					position: relative
+					width: 100%
+					&-dicription
+						position: absolute
+						display: inline-block
+						padding-left: 10px
+						h4
+							margin: 0
+							padding: 0
+						.comments
+							font-size: em(11px)
+							padding: 0px 20px
+							&::before
+								position: absolute
+								bottom: 15%
+								left: 10%
+								content: ''
+								background: url(../img/shop/comm.png)
+								width: 13px
+								height: 12px
+				.category
+					list-style: none
+					font-size: em(15px)
+					font-weight: bold
+					margin: 0 0 15px 0
+					padding: 0
+					&-item
+						border-bottom: 2px dotted #d9d9d9
+						padding: 5px
+						background: url() 0 0 no-repeat
+						position: relative
+				.search
+					margin-top: 10px
+					position: relative
+					input[type="text"]
+						padding: 5px 20px
+						color: #c3c2c2
+						width: 100%
+						opacity: .5
+						transition: all .3s ease
+						font-style: italic
+						&:focus
+							opacity: 1
+							a
+								opacity: 1
+					.fa
+						position: absolute
+						top: 30%
+						right: 5%
+						font-size: em(20px)
+						opacity: .7
+
 	@keyframes move
 		from
 			transform: rotate(0deg) scale(1)
 		to
 			transform: rotate(90deg) scale(.7)
-			left: -10px
 	@keyframes move-back
 		from
 			transform: rotate(90deg) scale(.7)
