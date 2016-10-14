@@ -1,3 +1,7 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
   background: url(../img/bg.jpg) repeat; }
 
@@ -9,6 +13,35 @@ a {
   a:hover {
     text-decoration: none;
     color: inherit; }
+  a:focus {
+    text-decoration: none;
+    color: none; }
+
+.social__item {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0px;
+  float: left; }
+
+.social-button {
+  display: inline-block; }
+  .social-button-link {
+    background: url(../img/header/social-icons.png) 0 0;
+    display: block;
+    height: 23px;
+    width: 23px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%; }
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 98;
+  opacity: .5; }
 
 header .top-pannel {
   background: #2a2b2c;
@@ -17,20 +50,6 @@ header .top-pannel {
   position: fixed;
   width: 99.99%;
   z-index: 9; }
-  header .top-pannel .social {
-    list-style: none;
-    margin: 0;
-    padding: 5px 0px;
-    float: left; }
-    header .top-pannel .social-button {
-      display: inline-block; }
-      header .top-pannel .social-button-link {
-        background: url(../img/header/social-icons.png) 0 0;
-        display: block;
-        height: 23px;
-        width: 23px;
-        -webkit-border-radius: 50%;
-                border-radius: 50%; }
   header .top-pannel .login {
     float: right;
     padding-top: 7px;

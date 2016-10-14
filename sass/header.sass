@@ -1,8 +1,10 @@
 @import "bourbon"
 @import "var.sass"
-
+*
+	box-sizing: border-box
 body
 	background: url(../img/bg.jpg) repeat
+
 .text-through
 	text-decoration: line-through
 a
@@ -10,6 +12,32 @@ a
 	&:hover
 		text-decoration: none
 		color: inherit
+	&:focus
+		text-decoration: none
+		color: none
+.social
+	&__item
+		list-style: none
+		margin: 0
+		padding: 5px 0px
+		float: left
+	&-button
+		display: inline-block
+		&-link
+			background: url(../img/header/social-icons.png) 0 0
+			display: block
+			height: 23px
+			width: 23px
+			border-radius: 50%
+.modal-bg
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #000
+	z-index: 98
+	opacity: .5
 header
 	.top-pannel
 		background: $topbg
@@ -18,19 +46,6 @@ header
 		position: fixed
 		width: 99.99%
 		z-index: 9
-		.social
-			list-style: none
-			margin: 0
-			padding: 5px 0px
-			float: left
-			&-button
-				display: inline-block
-				&-link
-					background: url(../img/header/social-icons.png) 0 0
-					display: block
-					height: 23px
-					width: 23px
-					border-radius: 50%
 		.login
 			float: right
 			padding-top: 7px

@@ -4721,7 +4721,9 @@ body textarea:required:valid {
         width: 28px; }
 
 .shop {
-  margin-top: 40px; }
+  margin-top: 40px;
+  padding-bottom: 55px;
+  border-bottom: 5px solid #000; }
   .shop-product {
     max-width: 830px;
     float: left;
@@ -4733,6 +4735,17 @@ body textarea:required:valid {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
     position: relative; }
+    .shop-product .page-list {
+      margin: 40px 0;
+      padding: 10px;
+      background-color: #fff;
+      border: 2px solid #eee;
+      width: 98%;
+      letter-spacing: 10px; }
+      .shop-product .page-list-link {
+        font-weight: bold; }
+        .shop-product .page-list-link:focus {
+          color: #cc3333; }
     .shop-product .sale {
       position: absolute;
       top: 20px;
@@ -4804,7 +4817,7 @@ body textarea:required:valid {
                   border-radius: 10px;
           float: right; }
   .shop-side {
-    max-width: 300px;
+    max-width: 290px;
     min-width: 200px;
     margin-left: 10px;
     float: right; }
@@ -4994,6 +5007,44 @@ body textarea:required:valid {
   to {
     opacity: 0; } }
 
+footer {
+  color: #fff;
+  background: url(../img/footer/bg.jpg) repeat;
+  padding: 30px; }
+  footer .social__item {
+    padding: 0; }
+  footer .social-button-link {
+    background: url(../img/footer/social-button.png) 0 0; }
+  footer .archive {
+    padding: 0;
+    list-style: none; }
+    footer .archive-item {
+      padding: 10px; }
+    footer .archive li + li {
+      border-top: 2px dotted #fff; }
+  footer .popular-discription {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 9px; }
+    footer .popular-discription img {
+      border: 4px solid #28292a;
+      max-width: 50%; }
+    footer .popular-discription .best-dicription {
+      padding-left: 10px; }
+  footer .search-foot input {
+    opacity: .28;
+    background: #000;
+    border: 1px solid #fff;
+    padding: 10px;
+    width: 100%; }
+  footer .tag-foot .tag-item {
+    display: inline-block;
+    background: #2a2a2a;
+    padding: 2px 5px;
+    margin: 0  0 5px 5px; }
+
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -5001,13 +5052,26 @@ body textarea:required:valid {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  /**/ }
-
-.font {
-  color: green; }
+  header .nav-section {
+    padding: 55px 15px 0px 15px; }
+    header .nav-section .menu-item {
+      margin-left: 15px; }
+  header .home-section {
+    background-size: cover; }
+    header .home-section h2 {
+      font-size: 2.8125em; }
+  .sort {
+    margin: 20px 0 10px 0; }
+    .sort-row-category-item {
+      padding: 0 10px 0 5px; }
+    .sort-row-select-item {
+      margin: -1.5% 10px 0 0; }
+      .sort-row-select-item .list {
+        margin-right: 10px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  /**/
   /*Disable Animation on Mobile Devices*/
   .animated {
     /*CSS transitions*/
