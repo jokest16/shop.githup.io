@@ -72,7 +72,7 @@ body textarea:required:valid
 	padding-bottom: 55px
 	border-bottom: 5px solid #000
 	&-product
-		max-width: 830px
+		width: 830px
 		float: left
 		display: flex
 		flex-flow: row wrap
@@ -115,10 +115,6 @@ body textarea:required:valid
 			margin-right: 10px
 			margin-bottom: 15px
 			position: relative
-			transition: all .5s ease
-			&:hover
-				transform: scale(1.1)
-				z-index: 999
 			img
 				width: 100%
 				z-index: 2
@@ -135,8 +131,12 @@ body textarea:required:valid
 					.artist
 						font-style: italic
 						font-weight: normal
-				p
-					margin: 5px 0
+				.text
+					&-prod
+						margin: 5px 0
+						padding: 2px
+						overflow: hidden
+						&-cap
 				.price
 					&-item
 						font-weight: bold
@@ -155,7 +155,6 @@ body textarea:required:valid
 						float: right
 	&-side
 		max-width: 290px
-		min-width: 200px
 		margin-left: 10px
 		float: right
 		.side-content
@@ -304,6 +303,26 @@ footer
 	color: #fff
 	background: url(../img/footer/bg.jpg) repeat
 	padding: 30px
+	position: relative
+	.button-scroll-top
+		display: block
+		position: absolute
+		top: -20px
+		right: 35px
+		color: #fff
+		background-color: $redBorder
+		padding: 5px 10px
+		&:hover
+			animation-name: UpDown
+			animation-duration: 1.5s
+			animation-iteration-count: infinite
+		@keyframes UpDown
+			0%
+				transform: translateY(0px)
+			50%
+				transform: translateY(10px)
+			100%
+				transform: translateY(0px)
 	.social
 		&__item
 			padding: 0

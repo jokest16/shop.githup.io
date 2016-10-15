@@ -1,10 +1,10 @@
 $(function(){
   var count = 0, minus = $('.minus'), pageLink = $('.page-list-link'),bigDiv = $('.shop-product-item');
-  $('.modal-bg').hide();
   pageLink.on('click',function() {//первая активная страница
     pageLink.removeClass('red-star');
   });
-  minus.on('click',function() {
+  $('.text-prod').hide();
+  minus.on('click',function(event) {
     count++//плюс/минус
     if(count % 2 === 0){
       $(this).css('animation-name','move-back').css('transform','rotate(0deg) scale(1)');
@@ -17,19 +17,29 @@ $(function(){
   if(window.screen.width < 1200){
     $('.shop').find('.container').css('width','100%');
   }
-  $('.shop-product-item').on('click',function (){
-    $(this).css('position','fixed');
-    $(this).css('z-index','101');
-    $(this).css('transition','none');
-    $(this).animate({
-      top : '20%',
-      right : '45%'
-    },1000);
-    $('.modal-bg').css('display','block');
-    $('.modal-bg').show();
+  bigDiv.on('click',function (){
+    var cloneDiv = $(this).clone();//клонируем айтем с товаром для того чтобы не ломалась вёрстка
+    cloneDiv.find('.text-prod').show();
+    $('body').prepend('<div class= "modal-bg">');
+    $('.modal-bg').animate({//показываем блок с содержимым
+      opacity: 1
+    },400);
+    $('.modal-bg').prepend(cloneDiv);//суём клон в начало блока
+    $(this).css('opacity','0');//прячем оригинал
     $('.modal-bg').on('click', function () {
-      $(this).hide();
-      bigDiv.css('position','static').css('z-index','inherit');
+      bigDiv.animate({//показываем оригинал
+        opacity: 1
+      },400);
+      $('.modal-bg').animate({//прячем фон
+          opacity: .0
+        },400,function () {
+          $('.modal-bg').remove();//и удалеем его
+      });
     });
+  });
+  $('.button-scroll-top').on('click',function(){
+    $('html,body').animate({
+    scrollTop: $('#top').offset().top
+  },500);
   });
 });
