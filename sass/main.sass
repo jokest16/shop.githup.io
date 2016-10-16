@@ -4,6 +4,7 @@
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
 @import "app/libs/font-awesome/css/font-awesome"
+@import "app/css/ui-slider"
 
 *::-webkit-input-placeholder
 	color: #666
@@ -72,7 +73,7 @@ body textarea:required:valid
 	padding-bottom: 55px
 	border-bottom: 5px solid #000
 	&-product
-		width: 830px
+		max-width: 830px
 		float: left
 		display: flex
 		flex-flow: row wrap
@@ -136,7 +137,8 @@ body textarea:required:valid
 						margin: 5px 0
 						padding: 2px
 						overflow: hidden
-						&-cap
+						&-toggle
+							display: none
 				.price
 					&-item
 						font-weight: bold
@@ -211,6 +213,10 @@ body textarea:required:valid
 				.prise
 					margin-top: 10px
 					padding: 10px 15px
+					#amount
+						background: transparent
+						color: #000!important
+						width: 35%
 					.button
 						background-color: $buttonColor
 						display: inline-block
