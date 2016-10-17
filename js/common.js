@@ -8,11 +8,6 @@ $(function(){
   });
   //конец
   $('.text-prod').hide();//прячем текст
-  $('aside').draggable({
-    axis: 'x',
-    containment:'parent',
-    revent: true
-  });
   minus.on('click',function(event) {//поворот минуса в плюс
     count++
     if(count % 2 === 0){
